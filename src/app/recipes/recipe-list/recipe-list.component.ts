@@ -8,11 +8,14 @@ import { Recipe } from '../recipe';
 })
 export class RecipeListComponent implements OnInit {
 
-  recipes: Recipe[] = [];
+  recipes: Recipe[] = [
+    new Recipe("Dummy", "Dummy", "http://thumbs.ebaystatic.com/images/m/mfXELL6zPWJE4OC0agiXMZw/s-l225.jpg", []),
+    new Recipe("DSDS", "DSSSS", "http://thumbs.ebaystatic.com/images/m/mfXELL6zPWJE4OC0agiXMZw/s-l225.jpg", [])
+  ];
 
   @Output() recipeSelected = new EventEmitter<Recipe>();
 
-  recipe = new Recipe("Dummy", "Dummy", "http://thumbs.ebaystatic.com/images/m/mfXELL6zPWJE4OC0agiXMZw/s-l225.jpg");
+  // recipe = new Recipe("Dummy", "Dummy", "http://thumbs.ebaystatic.com/images/m/mfXELL6zPWJE4OC0agiXMZw/s-l225.jpg");
 
   constructor() { }
 
